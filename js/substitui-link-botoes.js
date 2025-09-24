@@ -4,7 +4,7 @@
   // Seleciona todos os elementos com a classe
   const botoes = document.querySelectorAll(".link-botao");
 
-  // Adiciona o link em cada um
+  // Adiciona o link em cada botão com a classe 'linkBotao'
   botoes.forEach(botao => {
     botao.setAttribute("href", linkBotao);
     botao.setAttribute("target", "_blank"); // abre em nova aba
