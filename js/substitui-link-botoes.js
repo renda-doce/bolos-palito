@@ -1,5 +1,5 @@
 // Define o link do grupo
-  const linkBotao = "__LINK_BOTAO__";
+  const linkBotao = "https://wa.me/5511975037855?text=Olá%2C%20tenho%20interesse%20no%20curso!";
 
   // Seleciona todos os elementos com a classe
   const botoes = document.querySelectorAll(".link-botao");
