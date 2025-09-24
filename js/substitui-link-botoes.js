@@ -1,5 +1,5 @@
 // Define o link do grupo
-  const linkBotao = "__LINK_GRUPO__";
+  const linkBotao = "__LINK_BOTAO__";
 
   // Seleciona todos os elementos com a classe
   const botoes = document.querySelectorAll(".link-botao");
