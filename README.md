@@ -39,3 +39,13 @@ Os temas possíveis são:
 - ![#ec4899](https://placehold.co/15x15/ec4899/ec4899.png) `#ec4899` theme-pink
 - ![#14b8a6](https://placehold.co/15x15/14b8a6/14b8a6.png) `#14b8a6` theme-teal
 - ![#6b7280](https://placehold.co/15x15/6b7280/6b7280.png) `#6b7280` theme-gray
+
+Páginas adicionada para cada cor:
+- https://bolo-no-palito.rendadoce.blog/red.html
+- https://bolo-no-palito.rendadoce.blog/green.html
+- https://bolo-no-palito.rendadoce.blog/blue.html
+- https://bolo-no-palito.rendadoce.blog/gold.html
+- https://bolo-no-palito.rendadoce.blog/purple.html
+- https://bolo-no-palito.rendadoce.blog/pink.html
+- https://bolo-no-palito.rendadoce.blog/teal.html
+- https://bolo-no-palito.rendadoce.blog/gray.html
