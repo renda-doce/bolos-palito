@@ -50,37 +50,103 @@
             min-height: max(884px, 100dvh);
         }
     </style>
+
+    <!-- Temas -->
+    <style>
+        /* Tema vermelho (default) - estimula compra (urgência/ação) */
+        .theme-red {
+            --color-primary: #f0425f;
+            --color-background-light: #f8f6f6;
+            --color-background-dark: #221013;
+        }
+
+        /* Tema verde (confiança/segurança) */
+        .theme-green {
+            --color-primary: #16a34a;
+            --color-background-light: #f6faf6;
+            --color-background-dark: #102413;
+        }
+
+        /* Tema azul (autoridade/credibilidade) */
+        .theme-blue {
+            --color-primary: #2563eb;
+            --color-background-light: #f6f8fb;
+            --color-background-dark: #0f172a;
+        }
+
+        /* Tema dourado (luxo, valor agregado) */
+        .theme-gold {
+            --color-primary: #d97706;
+            --color-background-light: #fefbea;
+            --color-background-dark: #1c1503;
+        }
+
+        /* Tema roxo (criatividade e inspiração) */
+        .theme-purple {
+            --color-primary: #9333ea;
+            --color-background-light: #f9f6fb;
+            --color-background-dark: #1a0b2e;
+        }
+
+        /* Tema rosa (doçura e proximidade) */
+        .theme-pink {
+            --color-primary: #ec4899;
+            --color-background-light: #fdf2f8;
+            --color-background-dark: #2a0d1f;
+        }
+
+        /* Tema teal (equilíbrio e modernidade) */
+        .theme-teal {
+            --color-primary: #0d9488;
+            --color-background-light: #f0fdfa;
+            --color-background-dark: #052e29;
+        }
+
+        /* Tema cinza (neutro e elegante) */
+        .theme-gray {
+            --color-primary: #6b7280;
+            --color-background-light: #f9fafb;
+            --color-background-dark: #111827;
+        }
+    </style>
+
+
     <!-- Meta Pixel Code -->
     <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '324230336566459');
-    fbq('track', 'PageView');
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '324230336566459');
+        fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=324230336566459&ev=PageView&noscript=1"
-    /></noscript>
+            src="https://www.facebook.com/tr?id=324230336566459&ev=PageView&noscript=1" /></noscript>
     <!-- End Meta Pixel Code -->
 </head>
 
-<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200">
+<body class="theme-red bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200">
     <div class="relative w-full flex flex-col min-h-screen">
         <header class="w-full">
-            <div class="h-80 w-full bg-cover bg-center" style='background-image: url("./img/bolo-no-palito-banner.png");'>
+            <div class="h-80 w-full bg-cover bg-center"
+                style='background-image: url("./img/bolo-no-palito-banner.png");'>
                 <div class="h-full w-full bg-black/30"></div>
             </div>
         </header>
         <main class="flex-grow px-6 py-8 space-y-8">
             <section class="text-center space-y-4 -mt-32 relative z-10">
                 <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg">
-                    <h2 class="text-3xl font-bold text-primary mb-2">Ganhe dinheiro vendendo Bolos no Palito com tema de Natal</h2>
-                    <h3 class="text-lg text-slate-600 dark:text-slate-300">Curso Online com Acesso Vitalício, Apostila e Garantia de Satisfação</h3>
+                    <h2 class="text-3xl font-bold text-primary mb-2">Ganhe dinheiro vendendo Bolos no Palito com tema de
+                        Natal</h2>
+                    <h3 class="text-lg text-slate-600 dark:text-slate-300">Curso Online com Acesso Vitalício, Apostila e
+                        Garantia de Satisfação</h3>
                     <a class="link-botao mt-4 inline-block w-full bg-primary text-white font-bold py-4 px-6 rounded-lg text-lg hover:bg-primary/90 transition-colors"
                         href="#">
                         Clique aqui e GARANTA SUA VAGA!
@@ -95,12 +161,14 @@
                     tão bem! 🎉
                 </p>
                 <p class="text-lg">
-                    👉🏻 Esse doce delicado e delicioso vai fazer você encantar os seus clientes, aumentar suas vendas, 
+                    👉🏻 Esse doce delicado e delicioso vai fazer você encantar os seus clientes, aumentar suas vendas,
                     virar referência em confeitaria natalina e ainda surpreender a família na ceia.
                 </p>
                 <p class="text-lg">
-                    E para te ensinar do zero a criar essas sobremesas, a renomada chefe Ísis Alvarez preparou um curso exclusivo, com <i>passo
-                        a passo detalhado</i> e todas as receitas que você precisa para lucrar com esse produto que é sucesso por onde passa. 🤗
+                    E para te ensinar do zero a criar essas sobremesas, a renomada chefe Ísis Alvarez preparou um curso
+                    exclusivo, com <i>passo
+                        a passo detalhado</i> e todas as receitas que você precisa para lucrar com esse produto que é
+                    sucesso por onde passa. 🤗
                 </p>
             </section>
             <section class="bg-primary/10 dark:bg-primary/20 p-6 rounded-lg text-center space-y-4">
@@ -202,33 +270,37 @@
             <section id="depoimentos" class="space-y-6">
                 <h2 class="text-2xl font-bold text-center mb-6 text-slate-900 dark:text-white">O que nossas alunas
                     dizem:</h2>
-                    <p class="text-sm italic">*Os depoimentos são reais e estão grafados da maneira em que foram escritos.</p>
+                <p class="text-sm italic">*Os depoimentos são reais e estão grafados da maneira em que foram escritos.
+                </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <div class="bg-white dark:bg-slate-800 p-4 rounded-lg shadow-sm">
                         <span style="color: #FFD700; font-size: 22px;">★★★★★</span>
-                        <p class="italic">"Eu fiquei encantada com essa técnica e a possibilidade de aprender 
+                        <p class="italic">"Eu fiquei encantada com essa técnica e a possibilidade de aprender
                             mais um sucesso com a prof ísis obrigada ❤️"</p>
                         <p class="mt-2 font-bold text-primary">- @naralimamoda5170</p>
                     </div>
                     <div class="bg-white dark:bg-slate-800 p-4 rounded-lg shadow-sm">
                         <span style="color: #FFD700; font-size: 22px;">★★★★★</span>
                         <p class="italic">"Meu Deus!! Vc d+ <br>
-                            Deus continue te abençoando todos os dias da sua vida, não dá pra fugir, vc conquista com a sua simplicidade.
+                            Deus continue te abençoando todos os dias da sua vida, não dá pra fugir, vc conquista com a
+                            sua simplicidade.
                             Faço cursos com outros profissionais, <strong>mas você é diferenciada</strong>"</p>
                         <p class="mt-2 font-bold text-primary">- @ledasantosdasilva2701</p>
                     </div>
                     <div class="bg-white dark:bg-slate-800 p-4 rounded-lg shadow-sm">
                         <span style="color: #FFD700; font-size: 22px;">★★★★★</span>
-                        <p class="italic">"Bom dia agora que consegui assistir a aula que maravilha, confesso que esses doces vai ser 
-                            uma revolução, quero aprender todos que Deus abençoe sempre sua vida, seu trabalho, só gratidão 🙏🏻💖"</p>
+                        <p class="italic">"Bom dia agora que consegui assistir a aula que maravilha, confesso que esses
+                            doces vai ser
+                            uma revolução, quero aprender todos que Deus abençoe sempre sua vida, seu trabalho, só
+                            gratidão 🙏🏻💖"</p>
                         <p class="mt-2 font-bold text-primary   ">- @aniziafarias6788</p>
                     </div>
                 </div>
             </section>
 
-<section class="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-lg max-w-5xl mx-auto mb-12">
+            <section class="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-lg max-w-5xl mx-auto mb-12">
                 <div class="flex flex-col md:flex-row items-center gap-8">
-                    
+
                     <!-- Imagem da confeiteira -->
                     <div class="flex-shrink-0">
                         <img src="./img/logo-isis-rosa.webp" alt="Confeiteira Isis Alvarez"
@@ -238,9 +310,10 @@
                     </div>
                     <!-- Texto de apresentação -->
                     <div class="text-center md:text-left space-y-4">
-                        
+
                         <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-                            <strong>Isis Alvarez</strong> é confeiteira profissional, apaixonada por doces que encantam pela
+                            <strong>Isis Alvarez</strong> é confeiteira profissional, apaixonada por doces que encantam
+                            pela
                             beleza e pelo sabor. Com anos de experiência no mercado, ela já ajudou centenas
                             de alunas a transformar a confeitaria em uma fonte de renda e realização pessoal.
                         </p>
@@ -287,18 +360,18 @@
             </section>
         </main>
         <footer class="text-center py-6 px-6 text-sm text-slate-500 dark:text-slate-400">
-            
-        
-        <p class="text-justify">Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook.
-            Depois que você sair do Facebook, a responsabilidade não é deles e sim do nosso site.
-            Fazemos todos os esforços para indicar claramente e mostrar todas as provas do produto
-            e usamos resultados reais. Nós não vendemos o seu e-mail ou qualquer informação para
-            terceiros. Jamais fazemos nenhum tipo de spam. Se você tiver alguma dúvida, sinta-se
-            à vontade para usar o link de contato e falar conosco em horário comercial de Segunda
-            a Sextas das 09h00 ás 19h00. Lemos e respondemos todas as mensagens por ordem de chegada.
-        </p>
-        <hr class="my-4">
-        <p>© 2025 Renda Doce. Todos os direitos reservados.</p>
+
+
+            <p class="text-justify">Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook.
+                Depois que você sair do Facebook, a responsabilidade não é deles e sim do nosso site.
+                Fazemos todos os esforços para indicar claramente e mostrar todas as provas do produto
+                e usamos resultados reais. Nós não vendemos o seu e-mail ou qualquer informação para
+                terceiros. Jamais fazemos nenhum tipo de spam. Se você tiver alguma dúvida, sinta-se
+                à vontade para usar o link de contato e falar conosco em horário comercial de Segunda
+                a Sextas das 09h00 ás 19h00. Lemos e respondemos todas as mensagens por ordem de chegada.
+            </p>
+            <hr class="my-4">
+            <p>© 2025 Renda Doce. Todos os direitos reservados.</p>
         </footer>
     </div>
 
