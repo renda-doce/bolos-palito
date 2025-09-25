@@ -84,12 +84,69 @@
             --color-background-light: #fefbea;
             --color-background-dark: #1c1503;
         }
+
+        /* Tema roxo (criatividade e inspiração) */
+        .theme-purple {
+            --color-primary: #9333ea;
+            --color-background-light: #f9f6fb;
+            --color-background-dark: #1a0b2e;
+        }
+
+        /* Tema rosa (doçura e proximidade) */
+        .theme-pink {
+            --color-primary: #ec4899;
+            --color-background-light: #fdf2f8;
+            --color-background-dark: #2a0d1f;
+        }
+
+        /* Tema teal (equilíbrio e modernidade) */
+        .theme-teal {
+            --color-primary: #0d9488;
+            --color-background-light: #f0fdfa;
+            --color-background-dark: #052e29;
+        }
+
+        /* Tema cinza (neutro e elegante) */
+        .theme-gray {
+            --color-primary: #6b7280;
+            --color-background-light: #f9fafb;
+            --color-background-dark: #111827;
+        }
     </style>
 
-    
+
 </head>
 
 <body class="theme-blue bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200">
+    <!-- Seletor de tema -->
+
+    <div class="w-full bg-white dark:bg-slate-800 shadow p-4 flex flex-wrap justify-center gap-6">
+        <label class="flex items-center gap-2 cursor-pointer">
+            <input type="radio" name="theme" value="blue" class="text-primary" checked>blue
+        </label>
+        <label class="flex items-center gap-2 cursor-pointer">
+            <input type="radio" name="theme" value="green" class="text-primary">green
+        </label>
+        <label class="flex items-center gap-2 cursor-pointer">
+            <input type="radio" name="theme" value="red" class="text-primary">red
+        </label>
+        <label class="flex items-center gap-2 cursor-pointer">
+            <input type="radio" name="theme" value="gold" class="text-primary">gold
+        </label>
+        <label class="flex items-center gap-2 cursor-pointer">
+            <input type="radio" name="theme" value="purple" class="text-primary"> purple
+        </label>
+        <label class="flex items-center gap-2 cursor-pointer">
+            <input type="radio" name="theme" value="pink" class="text-primary"> pink
+        </label>
+        <label class="flex items-center gap-2 cursor-pointer">
+            <input type="radio" name="theme" value="teal" class="text-primary"> teal
+        </label>
+        <label class="flex items-center gap-2 cursor-pointer">
+            <input type="radio" name="theme" value="gray" class="text-primary"> gray
+        </label>
+    </div>
+
     <div class="relative w-full flex flex-col min-h-screen">
         <header class="w-full">
             <div class="h-80 w-full bg-cover bg-center"
@@ -227,24 +284,30 @@
             <section id="depoimentos" class="space-y-6">
                 <h2 class="text-2xl font-bold text-center mb-6 text-slate-900 dark:text-white">O que nossas alunas
                     dizem:</h2>
+                <p class="text-sm italic">*Os depoimentos são reais e estão grafados da maneira em que foram escritos.
+                </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <div class="bg-white dark:bg-slate-800 p-4 rounded-lg shadow-sm">
                         <span style="color: #FFD700; font-size: 22px;">★★★★★</span>
-                        <p class="italic">"Adorei o curso! As receitas são fáceis de seguir e os bolos ficaram
-                            incríveis. Meus clientes adoraram!"</p>
-                        <p class="mt-2 font-bold text-primary">- Ana S.</p>
+                        <p class="italic">"Eu fiquei encantada com essa técnica e a possibilidade de aprender
+                            mais um sucesso com a prof ísis obrigada ❤️"</p>
+                        <p class="mt-2 font-bold text-primary">- @naralimamoda5170</p>
                     </div>
                     <div class="bg-white dark:bg-slate-800 p-4 rounded-lg shadow-sm">
                         <span style="color: #FFD700; font-size: 22px;">★★★★★</span>
-                        <p class="italic">"A Ísis é uma excelente professora. O curso me deu a confiança para começar
-                            meu próprio negócio de bolos no palito."</p>
-                        <p class="mt-2 font-bold text-primary">- Maria L.</p>
+                        <p class="italic">"Meu Deus!! Vc d+ <br>
+                            Deus continue te abençoando todos os dias da sua vida, não dá pra fugir, vc conquista com a
+                            sua simplicidade.
+                            Faço cursos com outros profissionais, <strong>mas você é diferenciada</strong>"</p>
+                        <p class="mt-2 font-bold text-primary">- @ledasantosdasilva2701</p>
                     </div>
                     <div class="bg-white dark:bg-slate-800 p-4 rounded-lg shadow-sm">
                         <span style="color: #FFD700; font-size: 22px;">★★★★★</span>
-                        <p class="italic">"Recomendo a todas que querem aprender uma nova habilidade. O curso é completo
-                            e muito divertido!"</p>
-                        <p class="mt-2 font-bold text-primary   ">- Carla M.</p>
+                        <p class="italic">"Bom dia agora que consegui assistir a aula que maravilha, confesso que esses
+                            doces vai ser
+                            uma revolução, quero aprender todos que Deus abençoe sempre sua vida, seu trabalho, só
+                            gratidão 🙏🏻💖"</p>
+                        <p class="mt-2 font-bold text-primary   ">- @aniziafarias6788</p>
                     </div>
                 </div>
             </section>
@@ -328,6 +391,7 @@
 
     <script src="./js/substitui-link-botoes.js"></script>
     <script src="./js/carrossel.js"></script>
+    <script src="./js/muda-tema.js"></script>
 </body>
 
 </html>
