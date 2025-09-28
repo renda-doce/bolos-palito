@@ -50,9 +50,13 @@
             min-height: max(884px, 100dvh);
         }
     </style>
-
-    <!-- Temas -->
     <style>
+        :root {
+            --color-primary: #f0425f;
+            --color-background-light: #f8f6f6;
+            --color-background-dark: #221013;
+        }
+
         /* Tema vermelho (default) - estimula compra (urgência/ação) */
         .theme-red {
             --color-primary: #f0425f;
@@ -111,50 +115,92 @@
     </style>
 
 
-    <!-- Meta Pixel Code -->
-    <script>
-        !function (f, b, e, v, n, t, s) {
-            if (f.fbq) return; n = f.fbq = function () {
-                n.callMethod ?
-                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-            n.queue = []; t = b.createElement(e); t.async = !0;
-            t.src = v; s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '324230336566459');
-        fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=324230336566459&ev=PageView&noscript=1" /></noscript>
-    <!-- End Meta Pixel Code -->
 </head>
 
-<body class="theme-red bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200">
+<body class="theme-gold bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200">
+    
+    <!-- Seletor de tema -->
+    <div class="hidden w-full bg-white dark:bg-slate-800 shadow p-4 flex flex-wrap justify-center gap-6">
+        <label class="flex items-center gap-2 cursor-pointer">
+            <input type="radio" name="theme" value="blue" class="text-primary" checked>blue
+        </label>
+        <label class="flex items-center gap-2 cursor-pointer">
+            <input type="radio" name="theme" value="green" class="text-primary">green
+        </label>
+        <label class="flex items-center gap-2 cursor-pointer">
+            <input type="radio" name="theme" value="red" class="text-primary">red
+        </label>
+        <label class="flex items-center gap-2 cursor-pointer">
+            <input type="radio" name="theme" value="gold" class="text-primary">gold
+        </label>
+        <label class="flex items-center gap-2 cursor-pointer">
+            <input type="radio" name="theme" value="purple" class="text-primary"> purple
+        </label>
+        <label class="flex items-center gap-2 cursor-pointer">
+            <input type="radio" name="theme" value="pink" class="text-primary"> pink
+        </label>
+        <label class="flex items-center gap-2 cursor-pointer">
+            <input type="radio" name="theme" value="teal" class="text-primary"> teal
+        </label>
+        <label class="flex items-center gap-2 cursor-pointer">
+            <input type="radio" name="theme" value="gray" class="text-primary"> gray
+        </label>
+    </div>
+
     <div class="relative w-full flex flex-col min-h-screen">
+        <!-- <header class="w-full">
+            <div class="h-80 w-full bg-cover bg-center">
+                 <div class="h-full w-full bg-black/30"></div>
+                 <h1 class="text-3xl font-bold text-primary mb-2 my-5 p-5 text-center">Ganhe dinheiro vendendo Bolos no Palito com tema de
+                        Natal</h1>
+            </div>
+        </header> -->
         <header class="w-full">
-            <div class="h-80 w-full bg-cover bg-center"
-                style='background-image: url("./img/bolo-no-palito-banner.png");'>
-                <div class="h-full w-full bg-black/30"></div>
+            <div class="h-40 w-full bg-cover bg-center"
+                
+                style='background: var(--color-primary)' >
+                <div class="h-full w-full "></div>
             </div>
         </header>
+
+
         <main class="flex-grow px-6 py-8 space-y-8">
             <section class="text-center space-y-4 -mt-32 relative z-10">
                 <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg">
-                    <h2 class="text-3xl font-bold text-primary mb-2">Ganhe dinheiro vendendo Bolos no Palito com tema de
-                        Natal</h2>
-                    <h3 class="text-lg text-slate-600 dark:text-slate-300">Curso Online com Acesso Vitalício, Apostila e
-                        Garantia de Satisfação</h3>
+                    <h1 class="text-3xl font-bold text-primary mb-2 my-5 p-5 text-center">Ganhe dinheiro vendendo Bolos no Palito com tema de Natal</h1>
+                    <h2 class="text-lg text-slate-600 dark:text-slate-300">Curso <strong>Online em video</strong> com Acesso Vitalício e Apostila</h2>
                     <a class="link-botao mt-4 inline-block w-full bg-primary text-white font-bold py-4 px-6 rounded-lg text-lg hover:bg-primary/90 transition-colors"
                         href="#">
                         Clique aqui e GARANTA SUA VAGA!
                     </a>
                 </div>
             </section>
+
+            <!-- Carrossel de imagens -->
+            <section class="relative w-full max-w-4xl mx-auto">
+                <div class="overflow-hidden relative w-full rounded-lg shadow-lg">
+                    <div id="carousel" class="flex">
+                        <img src="./img/1.png" class="w-1/2 flex-shrink-0 object-cover">
+                        <img src="./img/2.png" class="w-1/2 flex-shrink-0 object-cover">
+                        <img src="./img/3.png" class="w-1/2 flex-shrink-0 object-cover">
+                        <img src="./img/4.png" class="w-1/2 flex-shrink-0 object-cover">
+                        <img src="./img/5.png" class="w-1/2 flex-shrink-0 object-cover">
+                        <img src="./img/6.png" class="w-1/2 flex-shrink-0 object-cover">
+                        <!-- duplicação p/ loop -->
+                        <img src="./img/1.png" class="w-1/2 flex-shrink-0 object-cover">
+                        <img src="./img/2.png" class="w-1/2 flex-shrink-0 object-cover">
+                        <img src="./img/3.png" class="w-1/2 flex-shrink-0 object-cover">
+                        <img src="./img/4.png" class="w-1/2 flex-shrink-0 object-cover">
+                        <img src="./img/5.png" class="w-1/2 flex-shrink-0 object-cover">
+                        <img src="./img/6.png" class="w-1/2 flex-shrink-0 object-cover">
+                    </div>
+                </div>
+
+            </section>
+
             <section class="text-center space-y-4">
-                <h1 class="text-3xl font-bold text-slate-900 dark:text-white">Curso de Bolo no Palito – Edição Natal
+                <h1 class="text-3xl font-bold text-slate-900 dark:text-white ">
+                    <span style='color: var(--color-primary)'>Curso de Bolo no Palito – Edição Natal</span>
                 </h1>
                 <p class="text-lg">
                     Poucas confeiteiras oferecem Bolos no Palito no cardápio… E é exatamente por isso que eles vendem
@@ -176,8 +222,11 @@
                 <p class="text-xl">Aproveite! A Ísis liberou <span class="font-bold">20 vagas promocionais</span> por
                     apenas</p>
                 <div class="my-4">
+                    <p class="text-slate-500 dark:text-slate-400 ml-2 text-2xl">De <span
+                            class="line-through text-4xl">R$197</span> por apenas</p>
+                    <br>
                     <span class="text-5xl font-extrabold text-primary">R$67</span>
-                    <span class="line-through text-slate-500 dark:text-slate-400 ml-2 text-4xl">R$197</span>
+
                 </div>
                 <a class="link-botao block w-full bg-primary text-white font-bold py-4 px-6 rounded-lg text-lg hover:bg-primary/90 transition-colors"
                     href="#">
@@ -228,44 +277,6 @@
                     </li>
                 </ul>
             </section>
-
-
-            <!-- Carrossel de imagens -->
-            <section class="relative w-full max-w-4xl mx-auto">
-                <div class="overflow-hidden rounded-xl shadow-lg">
-                    <div id="carousel" class="flex transition-transform duration-500">
-                        <img src="./img/1.png" alt="Imagem 1" class="w-full flex-shrink-0 object-cover">
-                        <img src="./img/2.png" alt="Imagem 2" class="w-full flex-shrink-0 object-cover">
-                        <img src="./img/3.png" alt="Imagem 3" class="w-full flex-shrink-0 object-cover">
-                        <img src="./img/4.png" alt="Imagem 4" class="w-full flex-shrink-0 object-cover">
-                        <img src="./img/5.png" alt="Imagem 4" class="w-full flex-shrink-0 object-cover">
-                        <img src="./img/6.png" alt="Imagem 4" class="w-full flex-shrink-0 object-cover">
-                    </div>
-                </div>
-
-                <!-- Botões -->
-                <button id="prev"
-                    class="absolute top-1/2 left-2 -translate-y-1/2 bg-white dark:bg-slate-800 p-2 rounded-full shadow hover:bg-primary/20 transition">
-                    ‹
-                </button>
-                <button id="next"
-                    class="absolute top-1/2 right-2 -translate-y-1/2 bg-white dark:bg-slate-800 p-2 rounded-full shadow hover:bg-primary/20 transition">
-                    ›
-                </button>
-
-                <!-- Indicadores -->
-                <div class="flex justify-center mt-4 gap-2">
-                    <span class="dot w-3 h-3 bg-primary rounded-full opacity-70 cursor-pointer"></span>
-                    <span class="dot w-3 h-3 bg-primary rounded-full opacity-30 cursor-pointer"></span>
-                    <span class="dot w-3 h-3 bg-primary rounded-full opacity-30 cursor-pointer"></span>
-                    <span class="dot w-3 h-3 bg-primary rounded-full opacity-30 cursor-pointer"></span>
-                    <span class="dot w-3 h-3 bg-primary rounded-full opacity-30 cursor-pointer"></span>
-                    <span class="dot w-3 h-3 bg-primary rounded-full opacity-30 cursor-pointer"></span>
-                </div>
-            </section>
-
-
-
 
             <section id="depoimentos" class="space-y-6">
                 <h2 class="text-2xl font-bold text-center mb-6 text-slate-900 dark:text-white">O que nossas alunas
@@ -377,6 +388,7 @@
 
     <script src="./js/substitui-link-botoes.js"></script>
     <script src="./js/carrossel.js"></script>
+    <script src="./js/muda-tema.js"></script>
 </body>
 
 </html>
